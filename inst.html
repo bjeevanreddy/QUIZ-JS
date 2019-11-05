@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Instructions</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="text-center">Online Quiz</h1>
+        <div class="box">
+            <h6><b>Instructions:</b></h6>
+            <p>The quizzes consists of questions carefully designed to help you self-assess your comprehension of the
+                information presented on the topics covered in the module. No data will be collected on the website
+                regarding your responses or how many times you take the quiz.</p>
+            <p>The quizzes consists of questions carefully designed to help you self-assess your comprehension of the
+                information presented on the topics covered in the module. No data will be collected on the website
+                regarding your responses or how many times you take the quiz.</p>
+            <p> Each question in the quiz is of multiple-choice or "true or false" format. Read each question carefully,
+                and click on the button next to your response that is based on the information covered on the topic in
+                the module. Each correct or incorrect response will result in appropriate feedback immediately at the
+                bottom of the screen. </p>
+            <p>The quizzes consists of questions carefully designed to help you self-assess your comprehension of the
+                information presented on the topics covered in the module. No data will be collected on the website
+                regarding your responses or how many times you take the quiz.</p>
+            <p>The quizzes consists of questions carefully designed to help you self-assess your comprehension of the
+                information presented on the topics covered in the module. No data will be collected on the website
+                regarding your responses or how many times you take the quiz.</p>
+            <p> Each question in the quiz is of multiple-choice or "true or false" format. Read each question carefully,
+                and click on the button next to your response that is based on the information covered on the topic in
+                the module. Each correct or incorrect response will result in appropriate feedback immediately at the
+                bottom of the screen. </p>
+            <div class="row">
+                <div class="col-sm-6">
+                    <p>Timer will start at the momet you Click start button.</p>
+                    <p>Your complete report will shown as soon as the exam is completed.</p>
+                    <p><kbd>Make sure you attempt all the questions.No question cannot be left blank</kbd></p>
+                    <p>Correct Answer will fetch you <b>10</b> marks</p>
+                    <p>Negative Mark will cost <b>2</b> marks penalty</p>
+                    <button class="btn btn-success text-center" onclick="starttest()">Start Test</button>
+                </div>
+                <div class="col-sm-6">
+                    <div class="panel  bg-info"
+                        style="height: 250px; width:250px;border:1px solid;border-radius: 10px;padding: 5px;">
+                        <div class="panel-heading">
+                            <h4>Login</h4>
+                        </div>
+                        <div class="panel-body">
+                            <input type="text" class="form-control" placeholder="Enter Name" id="name">
+                        </div>
+                        <div class="panel-footer mt-2">
+                            <button class="btn btn-danger" onclick="register()">Register</button>
+                        </div>
+                        <div class="panel-heading text-center">
+                            <p id="demo"></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br><br>
+        </div>
+    </div>
+    <script>
+        var nameget="";
+        function register() {
+            var name = document.getElementById('name').value;
+            sessionStorage.setItem("name", name);
+            document.getElementById('name').value = "";
+            document.getElementById("demo").innerHTML = "Click start To Start Test";
+            nameget=sessionStorage.getItem('name');
+        }
+        function starttest()
+        {
+        if(nameget==='')
+        {
+            //window.location.href="inst.html";
+            alert('Please register with your name');
+            //break;
+        }
+        else{
+            window.location.href='quiz.html';
+        }
+        }
+        
+        
+      
+        
+        
+
+    </script>
+</body>
+
+</html>

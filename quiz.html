@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>QUIZ</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+    <style>
+        body {
+            background-color: antiquewhite;
+        }
+        hr {
+            height: 2px;
+            color: red;
+        }
+        input {
+            font-size: 25px;
+        }
+        span {
+            font-weight: bolder;
+        }
+        table {
+            margin: 0 auto;
+            border-collapse: collapse;
+            display: none;
+        }
+        tr {
+            background-color: blanchedalmond;
+        }
+        td {
+            padding: 10px;
+            border: 1px solid black;
+            text-align: center;
+
+        }
+        .container1 {
+            margin-left: 20%;
+            margin-right: 20%;
+            margin-bottom: 0;
+        }
+
+        .finish {
+            margin-left: 20%;
+            margin-right: 20%;
+            margin-top: 1%;
+        }
+
+        #header {
+            text-align: center;
+            color: brown;
+        }
+
+        .nav-item {
+            color: white;
+        }
+
+        .end {
+            display: 'none';
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-sm  bg-dark navbar-dark fixed-top">
+        <span class="navbar-brand" href="#" id="username"></span>
+        <ul class="navbar-nav">
+            <li class="nav-item">
+                    <span>Time Left:&nbsp;</span><span id="minutes"> </span><span>:</span> <span id="seconds"> </span>
+            </li>
+        </ul>
+    </nav><br><br>
+    <h1 id="header" style="background-color: bisque;padding: 5px;">Quiz</h1>
+    <div id="box" class="container1">
+        <div id="qbox">
+        </div><br>
+        <div>
+            <button class="finish btn btn-danger" id="finish" onclick="submittest()">Finish test</button>
+        </div>
+    </div>
+    <div class="container">
+            <div class="row">
+                    <div class="col-sm-6 center">
+                            <table id="report">
+                                    <tr>
+                                        <td><b>Answerd</b></td>
+                                        <td><b>Correct</b></td>
+                                        <td><b>Incorrect</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td id="answered"></td>
+                                        <td id="correct"></td>
+                                        <td id="incorrect"></td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="2">Total Score</td>
+                                        <td id="Percentage"></td>
+                                    </tr>
+                                </table>
+                    </div>
+                    <div class="col-sm-6">
+                            <div id="chartContainer" style="height: 250px;width:200px;"></div>
+                    </div>
+                </div>
+    </div>
+  <br>
+    <div class="end container" id="end">
+        <button class="btn btn-info btn-lg" style="float: right;" onclick="gotofinalpage()">End Test</button>
+    </div>
+    <script src="quiz.js"></script>
+</body>
+
+</html>
