@@ -2,7 +2,7 @@ var name = sessionStorage.getItem('name');
 document.getElementById('username').innerHTML = name;
 document.getElementById('end').style.display = 'none';
 if (name === 'null') {
-    window.location.href = 'final.html';
+    window.location.href = 'feedback.html';
 }
 var timer = setInterval(countdown, 1000);
 
@@ -33,7 +33,7 @@ function countdown() {
     }
 }
 function gotofinalpage() {
-    window.location.href = 'final.html';
+    window.location.href = 'feedback.html';
     sessionStorage.removeItem('name');
 }
 function stoptime() {
